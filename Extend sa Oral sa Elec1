@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+class User {
+
+   // private field/variable
+   private int age;
+   private String name;
+ 
+   // initializing age
+   public void setAge(int age) {
+     this.age = age;
+   }
+ 
+   // initializing name
+   public void setName(String name) {
+     this.name = name;
+   }
+ 
+   // accessing age
+   public int getAge() {
+     return this.age;
+   }
+ 
+   // accessing name
+   public String getName() {
+     return this.name;
+   }
+ 
+ }
+ 
+ class Main {
+   public static void main(String[] args) {
+     Scanner scanner = new Scanner(System.in);
+     User user = new User();
+ 
+    //Only for Display
+    System.out.print("\nINPUT:");
+     // Get user input for age and name
+     System.out.print("\nEnter name: ");
+     String name = scanner.nextLine();
+     System.out.print("Enter age: ");
+     int age = scanner.nextInt();
+     scanner.nextLine(); // Consume the newline character
+  
+     // Set the values in the User object
+     user.setAge(age);
+     user.setName(name);
+ 
+     //Only for Display
+    System.out.print("\nOUTPUT:");
+     // getting the value and displaying output
+     System.out.println("\nName: " + user.getName());
+     System.out.println("Age: " + user.getAge());
+     
+     // Closing the scanner
+     scanner.close();
+   }
+ }
